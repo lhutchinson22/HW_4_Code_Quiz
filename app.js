@@ -4,9 +4,12 @@ console.log("sanity check");
 let timerCountdown = document.querySelector("#timer");
 
 // timer function
-let count = 75;
+let count = 10;
+
 function startTimerCoundown() {
   var timer = setInterval(function () {
+    // displays timer into the html
+    document.getElementById("timer").innerHTML = count;
     count--;
     console.log(count);
     if (count === 0) {

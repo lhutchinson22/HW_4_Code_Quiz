@@ -21,3 +21,10 @@ function startTimerCoundown() {
 }
 
 startTimerCoundown();
+
+//using jquery for the submit button to run a function
+$(document).ready(function () {
+  $("#submit").on("click", function () {
+    console.log("You clicked a button!!");
+  });
+});

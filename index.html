@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
   </head>
   <body>
     <div class="container">
-      <div class="header-div">
-        <h4 id="high-scores">View High Scores</h4>
-        <h4 id="time-span">Time: <span id="timer">75</span></h4>
+      <!--Header Row-->
+      <div class="row" id="header-div">
+        <div class="col-md-12">
+          <h4 id="high-scores">View High Scores</h4>
+          <h4 id="time-span">Time: <span id="timer">75</span></h4>
+        </div>
+      </div>
+
+      <!--Quiz Row-->
+      <div class="row" id="header-div">
+        <div class="col-md-12">
+          <div id="quiz"></div>
+          <button id="submit">Get Results</button>
+          <div id="results"></div>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>

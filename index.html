@@ -15,24 +15,16 @@
     />
   </head>
   <body>
-    <div class="container">
-      <!--Header Row-->
-      <div class="row" id="header-div">
-        <div class="col-md-12">
-          <h4 id="high-scores">View High Scores</h4>
-          <h4 id="time-span">Time: <span id="timer">75</span></h4>
-        </div>
-      </div>
+    <h1 id="timer"></h1>
 
-      <!--Quiz Row-->
-      <div class="row" id="header-div">
-        <div class="col-md-12">
-          <div id="quiz"></div>
-          <button id="submit">Get Results</button>
-          <div id="results"></div>
-        </div>
-      </div>
-    </div>
+    <h1 id="question"></h1>
+
+    <ul>
+      <li id="optionA" data-answer="A"></li>
+      <li id="optionB" data-answer="B"></li>
+      <li id="optionC" data-answer="C"></li>
+    </ul>
+
     <script src="app.js"></script>
   </body>
 </html>

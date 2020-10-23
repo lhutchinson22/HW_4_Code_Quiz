@@ -9,19 +9,19 @@ $(document).ready(function () {
   console.log(timerEl, timerCount);
   timerEl.textContent = timerCount;
 
-  var timer = window.setInterval(function () {
-    timerCount--;
-    timerEl.textContent = timerCount;
-
-    if (timerCount === 0) {
-      clearInterval(timer);
-    }
-  }, 1000);
-
   $("#startButton").on("click", function () {
     $("#welcome-page").addClass("invisble");
     $("#show-question").removeClass("invisible");
     $("#show-answers").removeClass("invisible");
+
+    var timer = window.setInterval(function () {
+      timerCount--;
+      timerEl.textContent = "Time: " + timerCount;
+
+      if (timerCount === 0) {
+        clearInterval(timer);
+      }
+    }, 1000);
   });
 
   //questions[0].answers.a
@@ -90,7 +90,7 @@ $(document).ready(function () {
   function setQuestions() {
     if (questionsPointer === questions.length) {
       clearInterval(timer);
-      alert("You are done with " + timerCount + " time left");
+      alert("You are done with " + timerCount + " seconds left");
       $("#highScore").removeClass("invisible");
       console.log(highScore);
       $("#highScore").text("Highscore: " + highScore);

@@ -9,6 +9,8 @@
   text-align: center;
   font-family: "Sriracha", cursive;
   padding-top: 50px;
+  width: 500px;
+  margin-left: 30%;
 }
 #welcome {
   text-align: center;
@@ -25,9 +27,26 @@
   text-align: center;
   font-family: "Sriracha", cursive;
   font-size: larger;
+  width: 500px;
+  margin-left: 30%;
 }
 
 button {
   color: blue;
   background-color: lightgray;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+}
+
+.btn-success {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+}
+
+#highScore {
+  font-size: 80px;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
 }

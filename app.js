@@ -37,7 +37,7 @@ $(document).ready(function () {
       correctAnswer: "c",
     },
     {
-      q: "The condition of an IF / ELSE statement is closed with___",
+      q: "The condition of an IF / ELSE statement is closed with___:",
       answers: {
         a: "quotes",
         b: "curly brackets",
@@ -47,7 +47,7 @@ $(document).ready(function () {
       correctAnswer: "c",
     },
     {
-      q: "Arrays in javascript can be used to store",
+      q: "Arrays in javascript can be used to store:",
       answers: {
         a: "numbers and strings",
         b: "other arrays",
@@ -58,7 +58,7 @@ $(document).ready(function () {
     },
     {
       q:
-        "String values must be enclosed with___ when being assigned to variables",
+        "String values must be enclosed with___ when being assigned to variables:",
       answers: {
         a: "commas",
         b: "curly brackets",
@@ -69,7 +69,7 @@ $(document).ready(function () {
     },
     {
       q:
-        "A very useful tool used during development and debugging for printing content to the debugger is",
+        "A very useful tool used during development and debugging for printing content to the debugger is:",
       answers: {
         a: "Javascript",
         b: "terminal / bash",

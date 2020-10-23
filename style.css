@@ -1,9 +1,22 @@
-/* .header-div {
-  height: 20px;
-} */
 #high-scores {
   float: left;
 }
-#time-span {
+#timer {
   float: right;
+  margin-top: -50px;
+}
+#question {
+  text-align: center;
+  font-family: "Sriracha", cursive;
+  padding-top: 50px;
+}
+#welcome {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Permanent Marker", cursive;
+}
+#answer-choices {
+  text-align: center;
+  font-family: "Sriracha", cursive;
+  font-size: larger;
 }

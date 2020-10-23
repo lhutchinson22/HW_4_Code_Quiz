@@ -21,7 +21,7 @@ $(document).ready(function () {
 
   var questions = [
     {
-      q: "Commonly used data types do not include",
+      q: "Commonly used data types do not include:",
       answers: {
         a: "strings",
         b: "booleans",
@@ -89,9 +89,11 @@ $(document).ready(function () {
     }
 
     question.textContent = questions[questionsPointer].q;
-    optionA.textContent = questions[questionsPointer].answers[0];
-    optionB.textContent = questions[questionsPointer].answers[1];
-    optionC.textContent = questions[questionsPointer].answers[2];
+    optionA.textContent = questions[questionsPointer].answers.a;
+    optionB.textContent = questions[questionsPointer].answers.b;
+    optionC.textContent = questions[questionsPointer].answers.c;
+
+    $("#question").append();
   }
   setQuestions();
 

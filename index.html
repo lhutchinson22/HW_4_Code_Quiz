@@ -19,16 +19,37 @@
     />
   </head>
   <body>
-    <h2 id="timer"></h2>
-    <h1 id="welcome">Welcome to your Javascript Quiz!</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="timer"></h2>
+      </div>
+    </div>
 
-    <h3 id="question"></h3>
+    <div class="row" id="welcome-page">
+      <div class="col-md-12">
+        <h1 id="welcome">Welcome to your Javascript Quiz!</h1>
+        <button id="startButton">Start</button>
+      </div>
+    </div>
 
-    <ul id="answer-choices">
-      <li id="optionA" data-answer="A"></li>
-      <li id="optionB" data-answer="B"></li>
-      <li id="optionC" data-answer="C"></li>
-    </ul>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 id="question"></h3>
+      </div>
+    </div>
+
+    <div class="row invisible" id="show-answers">
+      <div class="col-md-12">
+        <p id="answer-choices">
+          <button id="optionA" data-answer="a"></button>
+          <button id="optionB" data-answer="b"></button>
+          <button id="optionC" data-answer="c"></button>
+          <button id="optionD" data-answer="d"></button>
+        </p>
+      </div>
+    </div>
+
+    <div class="invisible" id="highScore">High Score</div>
 
     <script src="app.js"></script>
   </body>

@@ -1,24 +1,29 @@
 console.log("sanity check");
 
-var timerCount = 100;
-var timerEl = document.querySelector("#timer");
+// JavaScript function that wraps everything
+$(document).ready(function () {
+  var highScore = 0;
 
-timerEl.textContent = timerCount;
-
-var timer = window.setInterval(function () {
-  timerCount--;
+  var timerCount = 100;
+  var timerEl = document.querySelector("#timer");
+  console.log(timerEl, timerCount);
   timerEl.textContent = timerCount;
 
-  if (timerCount === 0) {
-    clearInterval(timer);
-  }
-}, 1000);
+  var timer = window.setInterval(function () {
+    timerCount--;
+    timerEl.textContent = timerCount;
 
-$(document).ready(function () {
-  //using jquery for buttons when pressed
-  //   $("li").on("click", function () {
-  //     console.log("You clicked a button!!");
+    if (timerCount === 0) {
+      clearInterval(timer);
+    }
+  }, 1000);
 
+  $("#startButton").on("click", function () {
+    $("#welcome-page").addClass("invisble");
+    $("#show-answers").removeClass("invisible");
+  });
+
+  //questions[0].answers.a
   var questions = [
     {
       q: "Commonly used data types do not include:",
@@ -85,6 +90,9 @@ $(document).ready(function () {
     if (questionsPointer === questions.length) {
       clearInterval(timer);
       alert("You are done with " + timerCount + " time left");
+      $("#highScore").removeClass("invisible");
+      console.log(highScore);
+      $("#highScore").text("Highscore: " + highScore);
       return;
     }
 
@@ -92,41 +100,68 @@ $(document).ready(function () {
     optionA.textContent = questions[questionsPointer].answers.a;
     optionB.textContent = questions[questionsPointer].answers.b;
     optionC.textContent = questions[questionsPointer].answers.c;
-
-    $("#question").append();
+    optionD.textContent = questions[questionsPointer].answers.d;
   }
   setQuestions();
 
   optionA.addEventListener("click", function () {
-    if (optionA.getAttribute("data-answer") === questions[questionsPointer].a) {
+    if (
+      optionA.getAttribute("data-answer") ===
+      questions[questionsPointer].correctAnswer
+    ) {
       console.log("This is correct");
-      questionsPointer++;
-      setQuestions();
+      highScore++;
     } else {
       console.log("wrong");
       timerCount -= 10;
     }
+
+    questionsPointer++;
+    setQuestions();
   });
 
   optionB.addEventListener("click", function () {
-    if (optionB.getAttribute("data-answer") === questions[questionsPointer].a) {
+    if (
+      optionB.getAttribute("data-answer") ===
+      questions[questionsPointer].correctAnswer
+    ) {
       console.log("This is correct");
-      questionsPointer++;
-      setQuestions();
+      highScore++;
     } else {
       console.log("wrong");
       timerCount -= 10;
     }
+    questionsPointer++;
+    setQuestions();
   });
 
   optionC.addEventListener("click", function () {
-    if (optionC.getAttribute("data-answer") === questions[questionsPointer].a) {
+    if (
+      optionC.getAttribute("data-answer") ===
+      questions[questionsPointer].correctAnswer
+    ) {
       console.log("This is correct");
-      questionsPointer++;
-      setQuestions();
+      highScore++;
     } else {
       console.log("wrong");
       timerCount -= 10;
     }
+    questionsPointer++;
+    setQuestions();
+  });
+
+  optionD.addEventListener("click", function () {
+    if (
+      optionD.getAttribute("data-answer") ===
+      questions[questionsPointer].correctAnswer
+    ) {
+      console.log("This is correct");
+      highScore++;
+    } else {
+      console.log("wrong");
+      timerCount -= 10;
+    }
+    questionsPointer++;
+    setQuestions();
   });
 });

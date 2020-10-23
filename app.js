@@ -20,6 +20,7 @@ $(document).ready(function () {
 
   $("#startButton").on("click", function () {
     $("#welcome-page").addClass("invisble");
+    $("#show-question").removeClass("invisible");
     $("#show-answers").removeClass("invisible");
   });
 

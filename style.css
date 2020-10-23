@@ -15,6 +15,12 @@
   margin-top: 50px;
   font-family: "Permanent Marker", cursive;
 }
+#welcome-page {
+  text-align: center;
+  width: 500px;
+  margin-left: 30%;
+  padding-top: 50px;
+}
 #answer-choices {
   text-align: center;
   font-family: "Sriracha", cursive;
